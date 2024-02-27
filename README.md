@@ -1,2 +1,2 @@
-#### Static websites | HTML, CSS 
+#### Static websites with HTML, CSS, Javascript
 
