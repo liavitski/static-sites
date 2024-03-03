@@ -166,6 +166,7 @@ html {
   --fourth-section-bg: hsl(32, 100%, 8%);
 
   /* First section tokens */
+
   --first-section-fontColor-1: hsla(0, 0%, 100%, 0.8);
   --first-section-fontSize-1: 8rem;
   --first-section-fontWeight-1: 400;
