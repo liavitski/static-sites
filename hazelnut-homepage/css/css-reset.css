@@ -1,0 +1,238 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Remove default button styles.
+*/
+
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* DESIGN TOKENS */
+
+html {
+  --first-section-bg: hsl(24, 40%, 13%);
+  --second-section-bg: hsl(28, 45%, 75%);
+  --third-section-bg: hsl(29, 18%, 34%);
+  --fourth-section-bg: hsl(32, 100%, 8%);
+
+  /* First section tokens */
+
+  --first-section-fontColor-1: hsla(0, 0%, 100%, 0.8);
+  --first-section-fontSize-1: 8rem;
+  --first-section-fontWeight-1: 400;
+  --first-section-fontFamily-1: 'Pompiere', sans-serif;
+
+  --first-section-fontColor-2: hsla(0, 0%, 100%, 0.9);
+  --first-section-fontSize-2: 2.25rem;
+  --first-section-fontWeight-2: 400;
+  --first-section-fontFamily-2: 'Galada', cursive;
+
+  /* Second section tokens */
+  --second-section-fontColor-1: hsl(0, 79%, 7%);
+  --second-section-fontSize-1: 3.75rem;
+  --second-section-fontWeight-1: 700;
+  --second-section-fontFamily-1: 'Poppins', sans-serif;
+
+  --second-section-fontColor-2: hsla(0, 42%, 7%, 0.85);
+  --second-section-fontSize-2: 2.375rem;
+  --second-section-fontWeight-2: 400;
+  --second-section-fontFamily-2: 'Poppins', sans-serif;
+
+  --second-section-fontColor-3: hsl(0, 0%, 0%);
+  --second-section-fontSize-3: 1.5rem;
+  --second-section-fontWeight-3: 400;
+  --second-section-fontFamily-3: 'Inter', sans-serif;
+
+  /* Third section tokens */
+  --third-section-fontColor-1: hsl(0, 0%, 100%);
+  --third-section-fontSize-1: 4rem;
+  --third-section-fontWeight-1: 700;
+  --third-section-fontFamily-1: 'Montserrat', sans-serif;
+
+  --third-section-fontColor-2: hsl(0, 0%, 100%);
+  --third-section-fontSize-2: 2.5rem;
+  --third-section-fontWeight-2: 400;
+  --third-section-fontFamily-2: 'Poppins', sans-serif;
+
+  --third-section-fontColor-3: hsl(0, 0%, 0%);
+  --third-section-fontSize-3: 1rem;
+  --third-section-fontWeight-3: 400;
+  --third-section-fontFamily-3: 'Poppins', sans-serif;
+
+  --third-section-fontColor-4: #0a424f;
+  --third-section-fontSize-4: 0.93rem;
+  --third-section-fontWeight-4: 600;
+  --third-section-fontFamily-4: 'Poppins', sans-serif;
+
+  /* Fourth section tokens */
+  --fourth-section-fontColor-1: hsl(0, 0%, 100%);
+  --fourth-section-fontSize-1: 3.75rem;
+  --fourth-section-fontWeight-1: 700;
+  --fourth-section-fontFamily-1: 'Inter', sans-serif;
+
+  --fourth-section-fontColor-2: hsla(0, 0%, 100%, 0.66);
+  --fourth-section-fontSize-2: 2.25rem;
+  --fourth-section-fontWeight-2: 400;
+  --fourth-section-fontFamily-2: 'Inter', sans-serif;
+
+  --fourth-section-fontColor-3: hsl(0, 0%, 100%);
+  --fourth-section-fontSize-3: 2.25rem;
+  --fourth-section-fontWeight-3: 400;
+  --fourth-section-fontFamily-3: 'Inter', sans-serif;
+
+  /* Fifth section tokens */
+  --fifth-section-fontColor-1: hsl(0, 0%, 0%);
+  --fifth-section-fontSize-1: 1.5rem;
+  --fifth-section-fontWeight-1: 400;
+  --fifth-section-fontFamily-1: 'Inter', sans-serif;
+}

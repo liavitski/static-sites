@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Ribeye+Marrow&display=swap');
+
+body {
+  background-color: hsla(15, 66%, 22%);
+}
+
+.main-wrapper {
+  max-width: 1158px;
+  height: 962px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
+  padding: 0 24px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header nav {
+    margin-bottom: 32px;
+    flex-shrink: 0;
+}
+
+header nav ul {
+  display: flex;
+  gap: 36px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+.spacer {
+  flex: 0 1 300px;
+}
+
+.hazelnut-logo-wrapper {
+  width: 150px;
+}
