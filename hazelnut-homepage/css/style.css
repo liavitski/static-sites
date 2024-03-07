@@ -2,15 +2,107 @@
 
 body {
   background-color: hsla(15, 66%, 22%);
+  font-family: 'Outfit', sans-serif;
+  position: relative;
+  padding-top: 28px;
+  height: 100%;
+  /* disable scroll when on small screen size */
+  overflow-x: hidden;
+}
+
+/* MODAL STYLES */
+
+.modal {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 1;
+  position: relative;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+.modal-container {
+  padding: 32px;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 70%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  opacity: 1;
+}
+
+.modal-container nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  margin-top: 40px;
+  font-size: 2rem;
+}
+
+.modal-container nav ul a {
+  padding: 12px;
+}
+
+.close-modal-btn {
+  scale: 2;
+  width: fit-content;
+  position: inherit;
+  right: 33px;
+  top: 30px;
+  padding: 8px 12px;
 }
 
 .main-wrapper {
   max-width: 1158px;
-  height: 962px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 28px;
   padding: 0 24px;
+  height: 962px;
+}
+
+.beam-top {
+  z-index: -2;
+  pointer-events: none;
+  width: 700px;
+  position: absolute;
+  top: 0;
+  left: 90px;
+  line-height: 0;
+}
+
+.beam-bottom {
+  z-index: -2;
+  width: 700px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  line-height: 0;
+  pointer-events: none;
+}
+
+.beam-top img {
+  width: 100%;
+}
+
+.beam-bottom img {
+  width: 100%;
 }
 
 header {
@@ -19,8 +111,8 @@ header {
 }
 
 header nav {
-    margin-bottom: 32px;
-    flex-shrink: 0;
+  margin-bottom: 32px;
+  flex-shrink: 0;
 }
 
 header nav ul {
@@ -28,8 +120,15 @@ header nav ul {
   gap: 36px;
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: 'Outfit', sans-serif;
   color: hsl(0, 0%, 100%);
+}
+
+.hamburger-btn {
+  padding: 8px;
+  scale: 2;
+  margin-bottom: 30px;
+  color: white;
+  display: none;
 }
 
 .spacer {
@@ -38,4 +137,128 @@ header nav ul {
 
 .hazelnut-logo-wrapper {
   width: 150px;
+}
+
+main {
+  position: relative;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 60px;
+}
+
+.main-img-wrapper {
+  line-height: 0;
+  position: absolute;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  right: -24%;
+}
+
+.main-img-wrapper img {
+  width: 100%;
+}
+
+.content-wrapper h1 {
+  font-size: clamp(2.75rem, 6vw + 1rem, 5.8rem);
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  width: clamp(232px, 40vw + 3rem, 477px);
+}
+
+.content-wrapper h2 {
+  font-family: 'Ribeye Marrow', serif;
+  font-size: clamp(1rem, 1.5vw + 1rem, 1.35rem);
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  width: clamp(300px, 43vw + 1rem, 625px);
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 24px 0;
+  width: 225px;
+  height: 76px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.btn.buy {
+  background-color: hsl(0, 0%, 85%);
+  color: hsla(15, 66%, 22%);
+}
+
+.btn.view {
+  background-color: none;
+  border: 2px solid white;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  header {
+    justify-content: space-between;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .main-img-wrapper {
+    display: none;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .beam-top {
+    width: 430px;
+  }
+
+  .beam-bottom {
+    width: 500px;
+  }
+}
+
+@media (max-width: 535px) {
+  .buttons-wrapper {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn.view {
+    margin-top: 12px;
+  }
+
+  body {
+    height: fit-content;
+    padding-bottom: 32px;
+  }
+
+  .beam-bottom {
+    width: 500px;
+  }
+
+  .main-wrapper {
+    height: fit-content;
+  }
+
+  .beam-top {
+    width: 336px;
+    left: 10px;
+  }
 }

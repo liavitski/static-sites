@@ -6,11 +6,42 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <script
+      src="https://kit.fontawesome.com/a0da06e8d8.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/css/css-reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="script.js" defer></script>
     <title>Hazelnut-homepage</title>
   </head>
+
   <body>
+    <div class="modal">
+      <div class="modal-overlay" tabindex="-1">
+        <div class="modal-container">
+          <button class="close-modal-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <nav>
+            <ul>
+              <li><a href="" aria-selected="true">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="beam-top">
+      <img src="/images/beam-top.png" alt="" />
+    </div>
+    <div class="beam-bottom">
+      <img src="/images/beam-bottom.png" alt="" />
+    </div>
+
     <div class="main-wrapper">
       <header>
         <img
@@ -27,6 +58,9 @@
             <li><a href="">Contact Us</a></li>
           </ul>
         </nav>
+        <button class="hamburger-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </header>
       <main>
         <div class="content-wrapper">
@@ -35,10 +69,14 @@
             Nutty Delights - excellence, best sellers & cultivating
             the finest hazelnuts
           </h2>
-          <button class="buy">Buy Hazelnuts</button>
-          <button class="view-more">View More</button>
+          <div class="buttons-wrapper">
+            <button class="btn buy">Buy Hazelnuts</button>
+            <button class="btn view">View More</button>
+          </div>
+          <div class="main-img-wrapper">
+            <img src="/images/hazelnut-main.png" alt="Hazelnuts" />
+          </div>
         </div>
-        <!-- <img src="/images/hazelnut-main.png" alt="" /> -->
       </main>
     </div>
   </body>
